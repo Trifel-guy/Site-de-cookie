@@ -9,6 +9,8 @@ import { HomeComponent } from './pages/home/home.component';
 import { ConnectionComponent } from './pages/connection/connection.component';
 import { CartComponent } from './pages/cart/cart.component';
 import { CookieComponent } from './pages/cookie/cookie.component';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { CookieComponent } from './pages/cookie/cookie.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

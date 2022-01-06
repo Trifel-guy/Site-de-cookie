@@ -1,1 +1,20 @@
-<p>home works!</p>
+<h1>Les cookies proposées par la boutiques:</h1>
+    <div *ngFor="let cookie of cookiesService.listCookies" class="container">
+        <div class="text">
+            <div class="overlay">
+                <ul>
+                    <li>{{ cookie.name | uppercase }}</li>
+                    <li>{{ cookie.available }}</li>
+                    <li>{{ cookie.description }}</li>
+                    <li>{{ cookie.quantity }}</li> 
+                </ul>
+                <!-- <div *ngFor="let e of cookie.ingredients" class="ingredients">
+                    <ul >
+                        <li>{{ e }}</li>
+                    </ul> 
+                </div> -->
+            </div>
+        </div>
+    
+        <img [src]="cookie.picture" class="image">
+    </div>
