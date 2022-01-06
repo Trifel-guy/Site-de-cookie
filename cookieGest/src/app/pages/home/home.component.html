@@ -1,7 +1,7 @@
 <h1>Les cookies proposées par la boutiques:</h1>
     <div *ngFor="let cookie of cookiesService.listCookies" class="container">
-        <div class="text">
-            <div class="overlay">
+        <div class="overlay">
+            <div class="text">
                 <ul>
                     <li>{{ cookie.name | uppercase }}</li>
                     <li>{{ cookie.available }}</li>
