@@ -23,4 +23,5 @@ ul {
   
   li a:hover {
     background-color: blue;
+    cursor:pointer;
   }
