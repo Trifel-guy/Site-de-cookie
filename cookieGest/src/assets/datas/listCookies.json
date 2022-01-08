@@ -9,7 +9,7 @@
                     "50g de sucre roux",
                     "1 jaune d'oeuf",
                     "½ càc d'extrait de vanille"],
-        "picture":"assets/images/cookie1.webp",
+        "picture":"assets/images/cookie1.png",
         "available":true,
         "quantity":10
     },
@@ -28,7 +28,7 @@
                     "1 œuf battu",
                     "2 cuillères à soupe de lait (si la pâte est trop friable)",
                     "environ 40 M&M’s cacahuète"],
-        "picture":"assets/images/cookie2.webp",
+        "picture":"assets/images/cookie2.png",
         "available":true,
         "quantity":15
     },
@@ -42,7 +42,7 @@
                     "4 onces de beurre non salé (ramolli)",
                     "1 gros œuf (température ambiante)",
                     "13 onces de farine à gâteau"],
-        "picture":"assets/images/cookie3.jpg",
+        "picture":"assets/images/cookie3.png",
         "available":true,
         "quantity":18
     }

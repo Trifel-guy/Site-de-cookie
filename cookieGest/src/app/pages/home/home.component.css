@@ -5,15 +5,27 @@ h1{
 .container {
     position: relative;
     width: 400px;
-    display: block;
+    display: inline-block;
     margin-bottom: 5px;
     margin-right: 10px;
 }
   
 .image {
+    position: relative;
     display: block;
-    width: 200px;
-    height: 200px;
+    width: 400px;
+    height: 400px;
+    
+}
+
+button {
+    color: #008CBA;
+    margin-top: 10px;
+    margin-right: 5px;
+    /* margin-bottom: 5px; */
+    /* position: inherit; */
+    padding: 5px;
+    position: absolute;
 }
   
 .overlay {
@@ -34,13 +46,20 @@ h1{
 }
   
 .text {
-    color: black;
-    font-size: 20px;
+    color: white;
+    font-size: 15px;
     position: relative;
+    display: block;
     top: 50%;
     left: 50%;
     -webkit-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
-    text-align: center;
+
+    /* text-align: center; */
+    /* margin-top: 20px; */
+}
+
+.text ul {
+    list-style-type: none;
 }
