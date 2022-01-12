@@ -4,10 +4,11 @@
     <div class="overlay">
         <div class="text">
             <ul>
-                <li>Nom: {{ cookie.name | uppercase }}</li>
-                <li *ngIf="cookie.available">Etat: Disponible</li>
-                <li>Description: {{ cookie.description }}</li>
-                <li>Quantité: {{ cookie.quantity }}</li> 
+                <li><b>Nom:</b> {{ cookie.name | uppercase }}</li>
+                <li *ngIf="cookie.available"><b>Etat:</b> Disponible</li>
+                <li><b>Description:</b> {{ cookie.description }}</li>
+                <li><b>Quantité:</b> {{ cookie.quantity }}</li>
+                <li><b>Cart:</b> {{ getQuantity() }}</li> 
             </ul>
             <!-- <div *ngFor="let e of cookie.ingredients" class="ingredients">
                 <ul >
@@ -18,5 +19,5 @@
     </div> 
     
     <!-- <button>En savoir plus</button> -->
-    <button>Ajouter au panier</button>
+    <button (click)="increaseQuantity()">Ajouter au panier</button>
 </div>
