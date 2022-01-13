@@ -9,6 +9,7 @@ import { environment } from 'src/environments/environment';
 export class CookiesService {
 
   listCookies:Array<ICookie> = [];
+  // quantity:number = 0;
 
   constructor(private http:HttpClient) { 
     this.getCookies(); 
@@ -23,4 +24,8 @@ export class CookiesService {
       }
     )
   }
+
+  
 }
+
+

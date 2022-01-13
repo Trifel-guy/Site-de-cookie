@@ -7,5 +7,6 @@ export interface ICookie {
     picture?:string;
     available:boolean;
     token?:string | number;
+    price:number;
     quantity:number;
 }

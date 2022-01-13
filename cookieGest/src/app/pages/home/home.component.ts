@@ -14,16 +14,11 @@ export class HomeComponent implements OnInit {
   private quantity:number = 0;
   // private listCookie:Array<ICookie> = [];
   
-  constructor(public cookiesService:CookiesService/*, public cartService:CartService*/) { }
+  constructor(public cookiesService:CookiesService, public cartService:CartService) { }
   
   // private quantity:number = this.cartService.getQuantityCart();
 
   ngOnInit(): void {
-  }
-
-  public increaseQuantity(): void {
-    this.quantity += 1;
-    // this.listCookie.push();
   }
 
   public getQuantity():number{

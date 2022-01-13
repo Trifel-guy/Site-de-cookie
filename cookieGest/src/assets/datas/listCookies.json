@@ -11,7 +11,8 @@
                     "½ càc d'extrait de vanille"],
         "picture":"assets/images/cookie1.png",
         "available":true,
-        "quantity":10
+        "price":7,
+        "quantity":0
     },
     
     {
@@ -30,7 +31,8 @@
                     "environ 40 M&M’s cacahuète"],
         "picture":"assets/images/cookie2.png",
         "available":true,
-        "quantity":15
+        "price":3,
+        "quantity":0
     },
 
     {
@@ -44,6 +46,7 @@
                     "13 onces de farine à gâteau"],
         "picture":"assets/images/cookie3.png",
         "available":true,
-        "quantity":18
+        "price":5,
+        "quantity":0
     }
 ]
