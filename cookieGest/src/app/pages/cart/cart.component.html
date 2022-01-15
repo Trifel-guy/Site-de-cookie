@@ -1,1 +1,27 @@
 <p>cart works!</p>
+
+<h1>Vous avez bon goût! voici vos choix de cookies:</h1>
+<div *ngFor="let cookie of cartService.cart" class="container">
+        <div class="imageAndInfos">
+            <div class="imageCookie">
+                <img [src]="cookie.picture" class="image">
+            </div>
+            <div class="text">
+                <ul>
+                    <li><b>Nom:</b> {{ cookie.name | uppercase }}</li>
+                    <li *ngIf="cookie.available"><b>Etat:</b> Disponible</li>
+                    <li><b>Description:</b> {{ cookie.description }}</li>
+                    <li><b>Prix:</b> {{ cookie.price }}&#x20AC;</li>
+                    <li><b>Quantité:</b> {{ cookie.quantity }}</li> 
+                </ul>
+            </div> 
+        </div>
+       
+    
+    <div id="buttons">
+        <button>+</button>
+        <span>{{ cookie.quantity }}</span>
+        <button>-</button>
+    </div>
+    
+</div>

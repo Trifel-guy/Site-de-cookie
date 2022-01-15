@@ -7,20 +7,21 @@ import { ICookie } from '../models/icookie';
 export class CartService {
 
   private quantityCart:number = 0;
-  // quantityCookie:number = 0;
+  private totalPrice:number = 0;
   cart:Array<ICookie> = [];
+  
 
   constructor() { }
-
-  public save(quantity:number): void{
-    this.quantityCart = quantity;
-  }
 
   public getQuantityCart(): number{
     return this.quantityCart;
   }
 
-  increaseQuantity(cookie: ICookie) {
+  public getTotalPrice(): number{
+    return this.totalPrice
+  }
+
+  addCookieInCart(cookie: ICookie) {
     // this.quantityCart += 1;
     if(this.cookieExistIn(cookie )){
       cookie.quantity += 1;

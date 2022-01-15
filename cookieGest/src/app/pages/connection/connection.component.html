@@ -1,1 +1,25 @@
-<p>connection works!</p>
+<section>
+    <div class="wrapper fadeInDown">
+        <div class="fadeIn first">
+            <h3>Connexion</h3>
+          </div>
+        <div id="formContent">
+            <form  (submit)="auth()">
+                <label for="id">Identifiant</label>
+                <input type="text" id="id" [(ngModel)]="profile.id" name="id" #id="ngModel" minlength="4" (input)="getInputs()" placeholder="Saisissez votre identifiant" class="fadeIn second" required>
+                <!-- display only if input data named id is not valid -->
+                <span *ngIf="errorId" class="error-message">Veuillez renseigner un identifiant valide de 4 caractères minimum</span>
+                <label for="password">Mot de passe</label>
+                <input type="password" id="password" [(ngModel)]="profile.password" #password="ngModel" minlength="1" name="password" placeholder="Saisissez votre mot de passe" class="fadeIn third" required>
+                <!-- display only if input data named password is not valid -->
+                <span *ngIf="errorPass" class="error-message">Veuillez renseigner un mot de passe valide de 4 caractères minimum</span>
+                
+                <input type="submit" value="Connexion" class="fadeIn fourth">
+                
+                <div id="formFooter"></div>
+                
+            </form>
+        </div>
+    </div>
+    
+</section>

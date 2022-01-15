@@ -1,0 +1,14 @@
+{ 
+    "_id":"0",
+    "name":"Miguel",
+    "firstname":"Kevin",
+    "group":"ING3",
+    "options":["ICC"],
+    "age":21,
+    "gender":"masculin",
+    "description":"jeune homme",
+    "comments":"bientôt pilote",
+    "contract":false,
+    "picture":"../images/image2.jpeg",
+    "token":"LeTokenDeConnexion"
+}

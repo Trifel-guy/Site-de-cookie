@@ -21,10 +21,6 @@ export class CartComponent implements OnInit {
     this.quantity += 1;
   }
 
-  func(){
-    this.cartService.save(this.quantity);
-  }
-
   public getQuantity(): number {
     return this.quantity;
   }
