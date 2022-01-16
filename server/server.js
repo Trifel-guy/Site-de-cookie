@@ -27,34 +27,14 @@ app.use((req, res, next) => {
     });
 });
 
-// Routes à partir desquelles il va renvoyer les donnees lors de solicitations
+// Routes à partir desquelles les données seront disponibles
 app.get('/', (req, res) => {
     console.log(req, res);
-    res.send('Doom for eternity');
+    res.send('Server correctement lancé!!!');
 });
 
 app.get('/cookies', (req, res) => {
    res.sendFile(path.resolve('./datas/listCookies.json'));
-});
-
-// app.get('/cookies', (req, res) => {
-//     //console.log(req, res);
-//     //res.send("Nobody's profile :')");
-//     res.sendFile(path.resolve('./datas/listCookies.json'));
-// });
-
-app.get('/cookie/:id', (req, res) => {
-    //console.log(req, res);
-    getCookies(req.params.id);
-    res.send('Cookie of the searched ' + req.params.id);
-});
-
-app.post('/postCart/:cart', (req, res)=>{
-    console.log("ID data recieved from the front", req.body);
-    if(req.body.cart){
-        let cart = jwt.sign({id:req.body.cart}, 'CYencryptedLoginToken');
-        res.send({cart});
-    }
 });
 
 app.post('/id', (req, res)=>{
@@ -69,23 +49,3 @@ app.post('/id', (req, res)=>{
 app.listen(3001, () => {
     console.log("Server launched successfully!")
 });
-
-
-/** Fonction de traitement du profil */
-function getCookies(id){
-    return fs.readFile(
-        path.resolve('./datas/listCookies.json'),
-        (error, data) => {
-            if(error) throw error;
-            console.log(data);
-            JSON.parse(data).find(cookie=>{
-                if (cookie._id==id){
-                    console.log(cookie);
-                    return cookie;
-                }else{
-                    console.log("Cookie not found");
-                };
-            });
-            data.find(profile=>profile._id == id);
-        }
-    )};
