@@ -12,9 +12,9 @@ export class HomeComponent implements OnInit {
   
   // cookies:Array<ICookie> = [];
   private quantity:number = 0;
-  cookie: any;
+  success: boolean = false;
   
-  constructor(public cookiesService:CookiesService, public cartService:CartService) { }
+  constructor(public cookiesService:CookiesService, private cartService:CartService) { }
   
   // private quantity:number = this.cartService.getQuantityCart();
 
@@ -23,6 +23,15 @@ export class HomeComponent implements OnInit {
 
   public getQuantity():number{
     return this.quantity;
+  }
+
+  public addCart(cookie:ICookie){
+    this.cartService.addCookieInCart(cookie);
+    this.success = true;
+  }
+
+  public closeAlert() {
+    this.success = false;
   }
 
 }

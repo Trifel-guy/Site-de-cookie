@@ -21,6 +21,6 @@
 </div>
 <div class="validOrNot" *ngIf="cartService.cart.length > 0">
     <button>Valider</button>
-    <button>Annuler</button>
+    <button (click)="cartService.clearCart()">Annuler</button>
 </div>
 

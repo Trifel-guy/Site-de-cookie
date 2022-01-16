@@ -86,3 +86,21 @@ h1{
 .text ul {
     list-style-type: none;
 }
+
+.success-msg {
+    margin-top: 50px;
+    display: inline-block;
+    position: relative;
+    color: rgb(1, 58, 1);
+    background: rgb(156, 196, 156);
+    border: 1px solid;
+    border-radius: 3px;
+    padding: 10px;
+    width: 30%;
+}
+
+.close-alert {
+  outline: none;
+  background: transparent;
+  border: 1px solid transparent;
+}

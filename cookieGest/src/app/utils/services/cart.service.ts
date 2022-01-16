@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { ICookie } from '../models/icookie';
 
+
 @Injectable({
   providedIn: 'root'
 })
@@ -18,7 +19,7 @@ export class CartService {
   }
 
   public getTotalPrice(): number{
-    return this.totalPrice
+    return this.totalPrice;
   }
 
   addCookieInCart(cookie: ICookie) {
@@ -32,18 +33,20 @@ export class CartService {
       this.quantityCart += 1;
       this.cart.push(cookie);
     }
+    // window.alert('Article corectement ajouté au panier');
     console.log(this.cart);
   }
 
   removeCookieInCart(cookie: ICookie) {
     // this.quantityCart += 1;
-    if(this.cookieExistIn(cookie) && cookie.quantity >= 1 ){
+    if(this.cookieExistIn(cookie) && cookie.quantity > 1 ){
       cookie.quantity -= 1;
       this.quantityCart -= 1;
     }
     else{
+      this.quantityCart -= 1;
       this.cart.forEach((cook,index)=>{
-        if(cook._id===cookie._id) this.cart.splice(index,1);
+        if(cook._id === cookie._id) this.cart.splice(index,1);
       });
     }
     console.log(this.cart);
@@ -54,5 +57,13 @@ export class CartService {
     return this.cart.some(function(el) {
       return el._id === cookie._id;
     }); 
+  }
+
+  clearCart() {
+    this.cart = [];
+    // return this.cart;
+  }
+  saveCart(cart:Array<ICookie>){
+    
   }
 }

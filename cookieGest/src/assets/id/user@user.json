@@ -1,8 +1,8 @@
 { 
-    "_id":"0",
+    "_id":"2",
     "identifiant":"admin",
     "password":"admin",
-    "admin":true,
+    "admin":false,
     "picture":"../images/image2.jpeg",
     "token":"LeTokenDeConnexion"
 }
