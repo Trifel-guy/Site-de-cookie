@@ -4,10 +4,10 @@
             <a routerLink="">Accueil</a>
         </li>
         <li>
-            <a routerLink="cookie">Gestion Cookie</a>
+            <a routerLink="cookie" *ngIf="statusService.connection">Gestion Cookie</a>
         </li>
         <li>
-            <a routerLink="cart"><img src="../../../assets/images/cart.png" alt="Panier">Panier</a>
+            <a routerLink="cart">({{ cartService.getQuantityCart() }})Panier</a>
         </li>
         <li>
             <a routerLink="connection">Connexion</a>

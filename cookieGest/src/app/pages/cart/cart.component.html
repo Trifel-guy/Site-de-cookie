@@ -1,5 +1,3 @@
-<p>cart works!</p>
-
 <h1>Vous avez bon goût! voici vos choix de cookies:</h1>
 <div *ngFor="let cookie of cartService.cart" class="container">
         <div class="imageAndInfos">
@@ -14,14 +12,15 @@
                     <li><b>Prix:</b> {{ cookie.price }}&#x20AC;</li>
                     <li><b>Quantité:</b> {{ cookie.quantity }}</li> 
                 </ul>
+                <button (click)="cartService.addCookieInCart(cookie)">+</button>
+                <span>{{ cookie.quantity }}</span>
+                <button (click)="cartService.removeCookieInCart(cookie)">-</button>
             </div> 
         </div>
-       
-    
-    <div id="buttons">
-        <button>+</button>
-        <span>{{ cookie.quantity }}</span>
-        <button>-</button>
-    </div>
-    
+        
 </div>
+<div class="validOrNot" *ngIf="cartService.cart.length > 0">
+    <button>Valider</button>
+    <button>Annuler</button>
+</div>
+

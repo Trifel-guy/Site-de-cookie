@@ -11,6 +11,7 @@ import { CartComponent } from './pages/cart/cart.component';
 import { CookieComponent } from './pages/cookie/cookie.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { DetailCookieComponent } from './pages/detail-cookie/detail-cookie.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { FormsModule } from '@angular/forms';
     HomeComponent,
     ConnectionComponent,
     CartComponent,
-    CookieComponent
+    CookieComponent,
+    DetailCookieComponent
   ],
   imports: [
     BrowserModule,

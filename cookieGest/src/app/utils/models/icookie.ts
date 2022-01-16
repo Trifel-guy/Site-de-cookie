@@ -1,5 +1,5 @@
 export interface ICookie {
-    _id?:number | string;
+    _id:number;
     name:string;
     description?:string;
     ingredients?:Array<string>;

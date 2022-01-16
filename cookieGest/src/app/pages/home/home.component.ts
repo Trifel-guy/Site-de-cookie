@@ -12,7 +12,7 @@ export class HomeComponent implements OnInit {
   
   // cookies:Array<ICookie> = [];
   private quantity:number = 0;
-  // private listCookie:Array<ICookie> = [];
+  cookie: any;
   
   constructor(public cookiesService:CookiesService, public cartService:CartService) { }
   

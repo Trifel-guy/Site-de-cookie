@@ -11,19 +11,18 @@
                 <li *ngIf="cookie.available"><b>Etat:</b> Disponible</li>
                 <li><b>Description:</b> {{ cookie.description }}</li>
                 <li><b>Prix:</b> {{ cookie.price }}&#x20AC;</li>
-                <li><b>Quantité:</b> {{ cartService.getQuantityCart() }}</li> 
+                <!-- <li><b>Quantité:</b> {{ cartService.getQuantityCart() }}</li>  -->
             </ul>
-            <!-- <div *ngFor="let e of cookie.ingredients" class="ingredients">
-                <ul >
-                    <li>{{ e }}</li>
-                </ul> 
-            </div> -->
         </div>
     </div> 
     
     <div id="buttons">
-        <button id="moreInfos">En savoir plus</button>
+        <!-- <button id="moreInfos" [routerLink]="['/detailCookie',cookie._id]">En savoir plus</button> -->
+        <a [routerLink]="['/detailCookie',cookie._id]">
+            <button id="moreInfos" (click)="cookiesService.getCookiesById(cookie._id)">En savoir plus</button>
+        </a>
         <button id="addCart" (click)="cartService.addCookieInCart(cookie)">Ajouter au panier</button>
     </div>
     
 </div>
+

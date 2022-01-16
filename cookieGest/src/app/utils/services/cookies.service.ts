@@ -9,10 +9,10 @@ import { environment } from 'src/environments/environment';
 export class CookiesService {
 
   listCookies:Array<ICookie> = [];
-  // quantity:number = 0;
+  cookiesDetails:Array<ICookie> = [];
 
   constructor(private http:HttpClient) { 
-    this.getCookies(); 
+    this.getCookies();
   }
 
   /** Method for get the extern datas with ajax  */
@@ -21,6 +21,16 @@ export class CookiesService {
       data => {
         this.listCookies = data;
         console.log(data);
+      }
+    )
+  }
+
+  // get cookie by id
+  getCookiesById(id:number){
+    this.http.get<Array<ICookie>>(environment.SERVEUR_URL+'listCookies.json').subscribe(
+      data => {
+        this.cookiesDetails = data.filter(e => e._id === id);
+        console.log(this.cookiesDetails);
       }
     )
   }

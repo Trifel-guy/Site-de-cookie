@@ -1,0 +1,22 @@
+<h1>Recette du cookie:</h1>
+<div class="container">
+    <div class="imageCookie">
+        <img [src]="cookiesService.cookiesDetails[0].picture" class="image">
+    </div>
+
+    <div class="overlay">
+        <div class="text">
+            <ul>
+                <li><b>Nom:</b> {{ cookiesService.cookiesDetails[0].name | uppercase }}</li>
+                <li *ngIf="cookiesService.cookiesDetails[0].available"><b>Etat:</b> Disponible</li>
+                <li><b>Description:</b> {{ cookiesService.cookiesDetails[0].description }}</li>
+                <li><b>Prix:</b> {{ cookiesService.cookiesDetails[0].price }}&#x20AC;</li>
+               <span><b>Ingrédients</b></span> 
+                <div *ngFor="let e of cookiesService.cookiesDetails[0].ingredients" class="ingredients">
+                    <ul >
+                        <li>{{ e }}</li>
+                    </ul> 
+                </div>
+            </ul>
+        </div>
+</div> 
