@@ -1,5 +1,5 @@
 { 
-    "_id":"0",
+    "_id":0,
     "identifiant":"admin",
     "password":"admin",
     "admin":true,

@@ -10,15 +10,13 @@ import { CartService } from 'src/app/utils/services/cart.service';
 export class CartComponent implements OnInit {
 
   private quantity:number = 0;
-  private listCookie:Array<ICookie> = [];
+  cart:any;
+  
 
   constructor(public cartService:CartService) { }
 
   ngOnInit(): void {
-  }
-
-  public increaseQuantity(): void {
-    this.quantity += 1;
+  
   }
 
   public getQuantity(): number {

@@ -1,3 +1,4 @@
+import { StatusService } from './../../utils/services/status.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CookieComponent implements OnInit {
 
-  constructor() { }
+  constructor(public statusService:StatusService) { }
 
   ngOnInit(): void {
   }

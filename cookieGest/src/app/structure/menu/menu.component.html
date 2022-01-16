@@ -10,7 +10,10 @@
             <a routerLink="cart">({{ cartService.getQuantityCart() }})Panier</a>
         </li>
         <li>
-            <a routerLink="connection">Connexion</a>
+            <a routerLink="connection" *ngIf="!statusService.connection">Connexion</a>
+        </li>
+        <li>
+            <a routerLink="/" *ngIf="statusService.connection" (click)="deconnecte()">Deconnexion</a>
         </li>
     </ul>
 </nav>

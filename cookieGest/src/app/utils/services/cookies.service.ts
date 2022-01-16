@@ -18,24 +18,24 @@ export class CookiesService {
   }
 
   /** Method for get the extern datas with ajax  */
-  // getCookies(){
-  //   this.http.get<Array<ICookie>>(environment.SERVEUR_URL+'listCookies.json').subscribe(
-  //     data => {
-  //       this.listCookies = data;
-  //       console.log(data);
-  //     }
-  //   )
-  // }
-
-  // get cookies from server.js
   getCookies(){
-    this.http.get<Array<ICookie>>(this.urlGetCookies).subscribe(
+    this.http.get<Array<ICookie>>(environment.SERVEUR_URL+'listCookies.json').subscribe(
       data => {
         this.listCookies = data;
         console.log(data);
       }
     )
   }
+
+  // get cookies from server.js
+  // getCookies(){
+  //   this.http.get<Array<ICookie>>(this.urlGetCookies).subscribe(
+  //     data => {
+  //       this.listCookies = data;
+  //       console.log(data);
+  //     }
+  //   )
+  // }
 
   postCookies(data:Array<ICookie>) {
     return this.http.post(this.urlGetCookies, data)

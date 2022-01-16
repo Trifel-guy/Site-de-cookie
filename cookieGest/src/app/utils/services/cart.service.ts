@@ -61,16 +61,26 @@ export class CartService {
     }); 
   }
 
+
   //vider le panier
   clearCart() {
     this.cart = [];
-    // return this.cart;
   }
   
-  postCookies(cart:any) {
+  postCart(cart:any) {
     return this.http.post<any>('http://localhost:3000/posts', cart)
     .subscribe(map((res:any)=>{
       return res;
     }))
   }
+
+  getCart(){
+    return this.http.get<any>('http://localhost:3000/posts')
+    .subscribe(res=>{
+      return res;
+      // this.cart = res;
+      console.log('res', res);
+    })
+  }
+  
 }

@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from 'src/app/utils/services/auth.service';
 import { StatusService } from 'src/app/utils/services/status.service';
@@ -13,7 +14,7 @@ export class ConnectionComponent implements OnInit {
   errorId:boolean = false;
   errorPass:boolean = false;
 
-  constructor(private authService:AuthService, private state:StatusService) { }
+  constructor(private authService:AuthService, private state:StatusService, private router: Router) { }
 
   ngOnInit(): void {
   }
@@ -28,11 +29,7 @@ export class ConnectionComponent implements OnInit {
       this.errorPass = true;
     }
     this.authService.getProfile(this.profile);
-  }
-
-  deconnecte(){
-    this.state.connection = false;
-    this.state.token = null;
+    this.router.navigateByUrl('');
   }
 
   getInputs(){
