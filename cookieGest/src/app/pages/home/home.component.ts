@@ -20,7 +20,6 @@ export class HomeComponent implements OnInit {
   // private quantity:number = this.cartService.getQuantityCart();
 
   ngOnInit(): void {
-    this.cart = this.cartService.getCart();
   }
 
   public getQuantity():number{
