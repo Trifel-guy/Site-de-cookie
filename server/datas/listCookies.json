@@ -1,0 +1,52 @@
+[
+
+    {
+        "_id":"0",
+        "name":"Cookie géant",
+        "description":"Un Cookie géant à partager à 3",
+        "ingredients":["45g de beurre fondu",
+                    "25g de sucre",
+                    "50g de sucre roux",
+                    "1 jaune d'oeuf",
+                    "½ càc d'extrait de vanille"],
+        "picture":"assets/images/cookie1.png",
+        "available":true,
+        "price":7,
+        "quantity":0
+    },
+    
+    {
+        "_id":"1",
+        "name":"Cookie aux M&M",
+        "description":"Cookies accueillant des M&M, Temps de préparation: 15mn, Temps de repos au frais: 15mn, Temps de cuisson: 11mn",
+        "ingredients":["80 g de sucre blanc",
+                    "70 g de cassonade + 10 g de cassonade",
+                    "180 g de farine",
+                    "1/2 cuillère café de bicarbonate de soude",
+                    "1/2 cuillère à café de levure (ou 1 cuillère à café de levure)",
+                    "70 g de beurre à température ambiante",
+                    "8 grosses cuillères à soupe de beurre de cacahuètes",
+                    "1 œuf battu",
+                    "2 cuillères à soupe de lait (si la pâte est trop friable)",
+                    "environ 40 M&M’s cacahuète"],
+        "picture":"assets/images/cookie2.png",
+        "available":true,
+        "price":3,
+        "quantity":0
+    },
+
+    {
+        "_id":"2",
+        "name":"Cookie LoftHouse",
+        "description":"Les Cookies LoftHouse nécéssitent 18 min de préparation pour une Quantité de 18 cookies",
+        "ingredients":["6 onces de sucre en poudre",
+                    "4 onces de margarine (ou de beurre)",
+                    "4 onces de beurre non salé (ramolli)",
+                    "1 gros œuf (température ambiante)",
+                    "13 onces de farine à gâteau"],
+        "picture":"assets/images/cookie3.png",
+        "available":true,
+        "price":5,
+        "quantity":0
+    }
+]

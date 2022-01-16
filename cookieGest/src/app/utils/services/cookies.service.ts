@@ -10,14 +10,26 @@ export class CookiesService {
 
   listCookies:Array<ICookie> = [];
   cookiesDetails:Array<ICookie> = [];
+  urlGetCookies:string = "http://localhost:3001/cookies";
+  
 
   constructor(private http:HttpClient) { 
     this.getCookies();
   }
 
   /** Method for get the extern datas with ajax  */
+  // getCookies(){
+  //   this.http.get<Array<ICookie>>(environment.SERVEUR_URL+'listCookies.json').subscribe(
+  //     data => {
+  //       this.listCookies = data;
+  //       console.log(data);
+  //     }
+  //   )
+  // }
+
+  // get cookies from server.js
   getCookies(){
-    this.http.get<Array<ICookie>>(environment.SERVEUR_URL+'listCookies.json').subscribe(
+    this.http.get<Array<ICookie>>(this.urlGetCookies).subscribe(
       data => {
         this.listCookies = data;
         console.log(data);
@@ -25,14 +37,14 @@ export class CookiesService {
     )
   }
 
+  postCookies(data:Array<ICookie>) {
+    return this.http.post(this.urlGetCookies, data)
+  }
+
   // get cookie by id
   getCookiesById(id:number){
-    // this.http.get<Array<ICookie>>(environment.SERVEUR_URL+'listCookies.json').subscribe(
-    //   data => {
-        this.cookiesDetails = this.listCookies.filter(e => e._id === id);
-        console.log(this.cookiesDetails);
-    //   }
-    // )
+    this.cookiesDetails = this.listCookies.filter(e => e._id === id);
+    console.log(this.cookiesDetails);
   }
 
   

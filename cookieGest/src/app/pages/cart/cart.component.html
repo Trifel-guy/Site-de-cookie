@@ -20,7 +20,7 @@
         
 </div>
 <div class="validOrNot" *ngIf="cartService.cart.length > 0">
-    <button>Valider</button>
+    <button (click)="cartService.postCookies(cartService.cart)">Valider</button>
     <button (click)="cartService.clearCart()">Annuler</button>
 </div>
 

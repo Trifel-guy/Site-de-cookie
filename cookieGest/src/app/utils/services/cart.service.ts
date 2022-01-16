@@ -1,5 +1,8 @@
 import { Injectable } from '@angular/core';
 import { ICookie } from '../models/icookie';
+import {HttpClient} from '@angular/common/http';
+import { environment } from 'src/environments/environment';
+import { map } from 'rxjs';
 
 
 @Injectable({
@@ -12,7 +15,7 @@ export class CartService {
   cart:Array<ICookie> = [];
   
 
-  constructor() { }
+  constructor(private http:HttpClient) { }
 
   public getQuantityCart(): number{
     return this.quantityCart;
@@ -33,7 +36,6 @@ export class CartService {
       this.quantityCart += 1;
       this.cart.push(cookie);
     }
-    // window.alert('Article corectement ajouté au panier');
     console.log(this.cart);
   }
 
@@ -59,11 +61,16 @@ export class CartService {
     }); 
   }
 
+  //vider le panier
   clearCart() {
     this.cart = [];
     // return this.cart;
   }
-  saveCart(cart:Array<ICookie>){
-    
+  
+  postCookies(cart:any) {
+    return this.http.post<any>('http://localhost:3000/posts', cart)
+    .subscribe(map((res:any)=>{
+      return res;
+    }))
   }
 }
