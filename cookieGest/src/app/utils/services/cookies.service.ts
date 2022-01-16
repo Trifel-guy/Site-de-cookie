@@ -27,12 +27,12 @@ export class CookiesService {
 
   // get cookie by id
   getCookiesById(id:number){
-    this.http.get<Array<ICookie>>(environment.SERVEUR_URL+'listCookies.json').subscribe(
-      data => {
-        this.cookiesDetails = data.filter(e => e._id === id);
+    // this.http.get<Array<ICookie>>(environment.SERVEUR_URL+'listCookies.json').subscribe(
+    //   data => {
+        this.cookiesDetails = this.listCookies.filter(e => e._id === id);
         console.log(this.cookiesDetails);
-      }
-    )
+    //   }
+    // )
   }
 
   

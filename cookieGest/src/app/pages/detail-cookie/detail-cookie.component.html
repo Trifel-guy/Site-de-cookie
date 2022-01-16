@@ -1,5 +1,5 @@
 <h1>Recette du cookie:</h1>
-<div class="container">
+<div class="container" *ngIf="cookiesService.cookiesDetails[0]">
     <div class="imageCookie">
         <img [src]="cookiesService.cookiesDetails[0].picture" class="image">
     </div>

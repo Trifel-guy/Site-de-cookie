@@ -43,7 +43,7 @@ export class CartService {
     }
     else{
       this.cart.forEach((cook,index)=>{
-        if(cook._id==cookie._id) this.cart.splice(index,1);
+        if(cook._id===cookie._id) this.cart.splice(index,1);
       });
     }
     console.log(this.cart);
