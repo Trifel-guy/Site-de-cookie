@@ -16,7 +16,7 @@ export class CartComponent implements OnInit {
   constructor(public cartService:CartService) { }
 
   ngOnInit(): void {
-  
+    // console.log(this.cartService.getCart());
   }
 
   public getQuantity(): number {

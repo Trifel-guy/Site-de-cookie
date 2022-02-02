@@ -77,9 +77,10 @@ export class CartService {
   getCart(){
     return this.http.get<any>('http://localhost:3000/posts')
     .subscribe(res=>{
+      console.log('res', res);
       return res;
       // this.cart = res;
-      console.log('res', res);
+      
     })
   }
   
